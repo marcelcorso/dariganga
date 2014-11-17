@@ -45,7 +45,7 @@ func main() {
 
   i := nuruu.NewGraph()
   for ; len(h.Vertices()) > 0; {
-    s := IndependentSet(h)
+    s := IN(h)
     h.RemoveVertices(s.Vertices() + s.Neighbors(s.Vertices()))
 
     i.AddGraph(s)
